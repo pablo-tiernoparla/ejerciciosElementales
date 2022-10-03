@@ -6,6 +6,31 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
         
+        /*
+        String[] palabras = {"hola","adios"};
+        System.out.println(palabras[0]);
+        System.out.println(palabras[1]);
+        
+        palabras[0] = "algo aqui";
+        System.out.println(palabras[0]);
+        
+        for(int i = 0; i < palabras.length; i++){
+            System.out.println(palabras[i]);
+        }// for
+        */
+        /*int x1 = 1;
+        int x2 = 1;
+        int x3 = 0;*/
+        int[] x={1,1,0};
+        
+        for(int i = 0; i <= 10; i++){
+            x[2] = x[1] + x[0];
+            x[0] = x[1];
+            x[1] = x[2];
+            System.out.println(x[2]);
+        }// for
+        
+        /*
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.println("Dame un dividendo entero");
@@ -23,7 +48,7 @@ public class ejerciciosElementales {
         System.out.println("N="+n+" D="+d+" R="+r+" Q="+q);
         System.out.print("N=d*q+r=");
         System.out.println((d*q)+r);
-        
+        */
         
         /*
         int i = 0;
