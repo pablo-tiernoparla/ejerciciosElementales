@@ -7,25 +7,58 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
 
+        int[] num = {1, 2, 3, 4};
+        double x = 0;
+        for (int i = 1; i < num.length; i++) {
+            num[i] = num[i] + num[i - 1];
+            //System.out.println(num[i]);
+            x = (double)num[i]/num.length;
+        }
+        System.out.println(x);
+        /*
+        //menor numero
+        double[] num = {1, -7.2, 4.5, -21, 3.14, 0, -500.6};
+        double x = num[0];
+        for (int i = 1; i < num.length; i++) {
+            if (x >= num[i]) {
+                x=num[i];
+            }// se puede usar else pero no hace falta
+        }
+        System.out.println(x);
+         */
+        //capicua while
+        /*
         int n = 31752;
+        int tmp = n;
+        int cifra;
+        int reverso = 0;
+        while (tmp > 0) {
+            cifra = tmp % 10;
+            reverso = reverso * 10 + cifra;
+            tmp = tmp / 10;
+        }
+        System.out.println(reverso);
+         */
+ /*
         int tam = 5;
         int tmp = n;
-        int[] save= new int[tam];
+        int[] save = new int[tam];
         for (int i = 0; i < tam; i++) {
-            save[i]=tmp%10;
-            tmp=tmp/10;
+            save[i] = tmp % 10;
+            tmp = tmp / 10;
         }
-        double x=0;
-        for (int i=0;i<tam;i++){
-            x=x + save[i]*Math.pow(10,tam-(i+1));
+        double x = 0;
+        for (int i = 0; i < tam; i++) {
+            x = x + save[i] * Math.pow(10, tam - (i + 1));
         }
-        System.out.println((int)x);
+        System.out.println((int) x);
         /*System.out.println(n%10);
         System.out.println((n/10)%10);
         System.out.println(((n/10)/10)%10);
         System.out.println((((n/10)/10)/10)%10);
         System.out.println(((((n/10)/10)/10)/10)%10);
          */
+
  /*
         String[] palabras = {"hola","adios"};
         System.out.println(palabras[0]);
