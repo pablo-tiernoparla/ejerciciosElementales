@@ -7,6 +7,16 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
 
+        String palabra = "abcde";
+
+        if (palabra.length() % 2 != 0) {
+            System.out.println(palabra.charAt(palabra.length() / 2));
+        } else {
+            System.out.println(palabra.substring((palabra.length() / 2)-1, (palabra.length() / 2)+1 ));
+        }
+
+
+        /*
         int[] num = {1, 2, 3, 4};
         double x = 0;
         for (int i = 1; i < num.length; i++) {
@@ -15,7 +25,7 @@ public class ejerciciosElementales {
             x = (double)num[i]/num.length;
         }
         System.out.println(x);
-        /*
+         */ /*
         //menor numero
         double[] num = {1, -7.2, 4.5, -21, 3.14, 0, -500.6};
         double x = num[0];
@@ -25,8 +35,7 @@ public class ejerciciosElementales {
             }// se puede usar else pero no hace falta
         }
         System.out.println(x);
-         */
-        //capicua while
+         */ //capicua while
         /*
         int n = 31752;
         int tmp = n;
@@ -38,8 +47,7 @@ public class ejerciciosElementales {
             tmp = tmp / 10;
         }
         System.out.println(reverso);
-         */
- /*
+         */ /*
         int tam = 5;
         int tmp = n;
         int[] save = new int[tam];
@@ -57,9 +65,7 @@ public class ejerciciosElementales {
         System.out.println(((n/10)/10)%10);
         System.out.println((((n/10)/10)/10)%10);
         System.out.println(((((n/10)/10)/10)/10)%10);
-         */
-
- /*
+         */ /*
         String[] palabras = {"hola","adios"};
         System.out.println(palabras[0]);
         System.out.println(palabras[1]);
@@ -75,8 +81,7 @@ public class ejerciciosElementales {
         int x2 = 1;
         int x3 = 0;
         
-         */
-        //int[] x={1,1,0};
+         */ //int[] x={1,1,0};
         /*int n = 8;
         int[] save= new int[n];
         save[0]=1;
@@ -88,16 +93,14 @@ public class ejerciciosElementales {
             x[1] = x[2];
             //System.out.println(save[i]);
         }// for
-         */
- /*
+         */ /*
         for (int i=2; i < n; i++){
            save[i]= save[i-1] + save[i-2];
         }
         for (int i=0; i<save.length; i++){
             System.out.println(save[i]);
         }
-         */
- /*
+         */ /*
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.println("Dame un dividendo entero");
@@ -115,8 +118,7 @@ public class ejerciciosElementales {
         System.out.println("N="+n+" D="+d+" R="+r+" Q="+q);
         System.out.print("N=d*q+r=");
         System.out.println((d*q)+r);
-         */
- /*
+         */ /*
         int i = 0;
         while(i < 11){
             i++;
@@ -124,20 +126,20 @@ public class ejerciciosElementales {
                 System.out.println(i);
             }// if
         }// while
-         */
- /*
+         */ /*
         //printear del 1 al 10 pares v2
         for(int i = 1; i < 11; i++){
             if(i%2 == 0){
                 System.out.println(i);
             }// if
         }// for
-         */
- /*
+         */ /*
         // printear numeros pares 1 al 10
         for(int i = 2; i < 11; i = i + 2) {
             System.out.println(i);
         } // for
-         */
+         */ {
+
+        }
     } // main
 }// ejerciciosElementales
