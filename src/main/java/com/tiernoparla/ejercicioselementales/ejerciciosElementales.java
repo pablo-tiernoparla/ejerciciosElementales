@@ -7,6 +7,36 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
 
+        String frase = "ab cd ef tgh";
+        char spc = ' ';
+        int palabras = 1;
+        char[] save = new char[frase.length()];
+        for (int i = 0; i < frase.length(); i++) {
+            save[i] = frase.charAt(i);
+            //System.out.println(save[i]);
+            if (save[i] == spc) {
+                palabras = palabras + 1;
+            }//if
+        }//for
+        System.out.println(palabras);
+
+        /*
+        char[] vocal = {'a','e','i','o','u'};
+        String frase = "abcdefgo";
+        int vocales = 0;
+        char[] save = new char[frase.length()];
+        //for(char c: toCharArray()){}
+        for (int i = 0; i < frase.length(); i++){
+            save[i] = Character.toLowerCase(frase.charAt(i));
+            if (save[i] == vocal[0] || save[i] == vocal[1] || 
+                    save[i] == vocal[2] || save[i] == vocal[3] || 
+                    save[i] == vocal[4]) {
+                vocales = vocales + 1;
+            }//if
+        }//for
+        System.out.println(vocales);
+         */
+ /*
         String palabra = "abcde";
 
         if (palabra.length() % 2 != 0) {
@@ -14,9 +44,9 @@ public class ejerciciosElementales {
         } else {
             System.out.println(palabra.substring((palabra.length() / 2)-1, (palabra.length() / 2)+1 ));
         }
+         */
 
-
-        /*
+ /*
         int[] num = {1, 2, 3, 4};
         double x = 0;
         for (int i = 1; i < num.length; i++) {
