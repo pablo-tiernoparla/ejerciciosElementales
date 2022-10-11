@@ -6,26 +6,42 @@ import java.lang.Math;
 public class ejerciciosElementales {
 
     public static void main(String[] args) {
-
+        
+        //interes X años
+        double n = 100;
+        double in = 5;
+        double y = 3;
+        double interest;
+        for (int i = 0; i < y; i++){
+            interest = n + n*in/100;
+            n = interest;
+            //System.out.println(interest);
+        }
+        System.out.println(n);
+               
+        //sumar digitos
+        /*
         Integer num = 12345;
-        String tmñ;
-        tmñ = num.toString();
+        String tam;
+        tam = num.toString();
         Integer x = 0;
-        Integer[] save = new Integer[tmñ.length()];
-        for (int i = 0; i < tmñ.length(); i++) {
+        Integer[] save = new Integer[tam.length()];
+        for (int i = 0; i < tam.length(); i++) {
             save[i] = num % 10;
             num = num / 10;
             x = x + save[i];
         }
         System.out.println(x);
-
+        */
+        //contar palabras
         /*
         String frase = "   Salimos    a     las    8  ";
         frase = frase.trim();
         String[] palabras = frase.split("\\s+");
         System.out.println(palabras.length);
          */
- /*
+        //contar vocales
+        /*
         char[] vocal = {'a','e','i','o','u'};
         String frase = "abcdefgo";
         int vocales = 0;
@@ -41,7 +57,8 @@ public class ejerciciosElementales {
         }//for
         System.out.println(vocales);
          */
- /*
+        //caracter del medio
+        /*
         String palabra = "abcde";
 
         if (palabra.length() % 2 != 0) {
@@ -51,8 +68,8 @@ public class ejerciciosElementales {
         (palabra.length() / 2)+1 ));
         }
          */
-
- /*
+         //media
+         /*
         int[] num = {1, 2, 3, 4};
         double x = 0;
         for (int i = 1; i < num.length; i++) {
@@ -71,8 +88,9 @@ public class ejerciciosElementales {
             }// se puede usar else pero no hace falta
         }
         System.out.println(x);
-         */ //capicua while
-        /*
+         */ 
+        //capicua while
+         /*
         int n = 31752;
         int tmp = n;
         int cifra;
@@ -113,11 +131,12 @@ public class ejerciciosElementales {
             System.out.println(palabras[i]);
         }// for
         
+        //guardar en array fibonacci
         int x1 = 1;
         int x2 = 1;
         int x3 = 0;
-        
-         */ //int[] x={1,1,0};
+        */
+        //int[] x={1,1,0};
         /*int n = 8;
         int[] save= new int[n];
         save[0]=1;
@@ -136,7 +155,9 @@ public class ejerciciosElementales {
         for (int i=0; i<save.length; i++){
             System.out.println(save[i]);
         }
-         */ /*
+        */
+        //division con scanner
+        /*
         Scanner sc = new Scanner(System.in);
         int n;
         System.out.println("Dame un dividendo entero");
@@ -145,6 +166,7 @@ public class ejerciciosElementales {
         System.out.println("Dame un divisor entero");
         d = sc.nextInt();
         
+        //division
         int r = n;
         int q = 0;
         while (r >= d){
