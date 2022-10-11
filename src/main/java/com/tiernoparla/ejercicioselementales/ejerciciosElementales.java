@@ -7,12 +7,11 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
         
-        String palabra = "abcde";
+        String palabra = "abcdef";
 
         if (palabra.length() % 2 != 0) {
             System.out.println(palabra.charAt(palabra.length() / 2));
-        }
-        if (palabra.length() % 2 == 0) {
+        } else {
              System.out.println(palabra.substring((palabra.length() / 2)-1,
                 (palabra.length() / 2)+1 ));
         }
