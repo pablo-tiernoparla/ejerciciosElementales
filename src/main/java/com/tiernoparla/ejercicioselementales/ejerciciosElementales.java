@@ -12,6 +12,10 @@ public class ejerciciosElementales {
         if (palabra.length() % 2 != 0) {
             System.out.println(palabra.charAt(palabra.length() / 2));
         }
+        if (palabra.length() % 2 == 0) {
+             System.out.println(palabra.substring((palabra.length() / 2)-1,
+                (palabra.length() / 2)+1 ));
+        }
         /*
         int num = 17345;
         int tam = 5;
@@ -23,8 +27,13 @@ public class ejerciciosElementales {
             x = x + save[i];
         }
         System.out.println(x);
+<<<<<<< HEAD
         */
         /*
+=======
+         */
+ /*
+>>>>>>> par
         String frase = "ab cd ef tgh";
         char spc = ' ';
         int palabras = 1;
