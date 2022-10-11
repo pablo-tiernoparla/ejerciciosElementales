@@ -7,6 +7,14 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
 
+        String palabra = "abcde";
+
+        if (palabra.length() % 2 != 0) {
+             System.out.println(palabra.charAt(palabra.length() / 2));
+        }
+
+
+        /*
         int num = 17345;
         int tam = 5;
         int x = 0;
@@ -17,7 +25,8 @@ public class ejerciciosElementales {
             x = x + save[i];
         }
         System.out.println(x);
-        /*
+         */
+ /*
         String frase = "ab cd ef tgh";
         char spc = ' ';
         int palabras = 1;
