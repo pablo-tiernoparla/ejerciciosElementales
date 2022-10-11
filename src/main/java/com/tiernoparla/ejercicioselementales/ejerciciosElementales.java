@@ -4,9 +4,8 @@ package com.tiernoparla.ejercicioselementales;
 import java.lang.Math;
 
 public class ejerciciosElementales {
-
-    public static void main(String[] args) {
-        
+    static void interes() {
+        //hacer metodo con el interes
         //interes X años
         double n = 100;
         double in = 5;
@@ -18,7 +17,12 @@ public class ejerciciosElementales {
             //System.out.println(interest);
         }
         System.out.println(n);
-               
+    }
+
+    public static void main(String[] args) {
+        
+        interes();
+        
         //sumar digitos
         /*
         Integer num = 12345;
