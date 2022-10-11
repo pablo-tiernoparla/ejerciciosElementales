@@ -7,6 +7,17 @@ public class ejerciciosElementales {
 
     public static void main(String[] args) {
 
+        int num = 17345;
+        int tam = 5;
+        int x = 0;
+        int[] save = new int[tam];
+        for (int i = 0; i < tam; i++) {
+            save[i] = num % 10;
+            num = num / 10;
+            x = x + save[i];
+        }
+        System.out.println(x);
+        /*
         String frase = "ab cd ef tgh";
         char spc = ' ';
         int palabras = 1;
@@ -19,8 +30,8 @@ public class ejerciciosElementales {
             }//if
         }//for
         System.out.println(palabras);
-
-        /*
+         */
+ /*
         char[] vocal = {'a','e','i','o','u'};
         String frase = "abcdefgo";
         int vocales = 0;
@@ -42,7 +53,8 @@ public class ejerciciosElementales {
         if (palabra.length() % 2 != 0) {
             System.out.println(palabra.charAt(palabra.length() / 2));
         } else {
-            System.out.println(palabra.substring((palabra.length() / 2)-1, (palabra.length() / 2)+1 ));
+            System.out.println(palabra.substring((palabra.length() / 2)-1,
+        (palabra.length() / 2)+1 ));
         }
          */
 
