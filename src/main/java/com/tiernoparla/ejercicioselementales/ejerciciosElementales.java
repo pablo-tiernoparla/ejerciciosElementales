@@ -6,52 +6,31 @@ import java.lang.Math;
 public class ejerciciosElementales {
 
     public static void main(String[] args) {
-        
-        String palabra = "abcdef";
 
-        if (palabra.length() % 2 != 0) {
-            System.out.println(palabra.charAt(palabra.length() / 2));
-        } else {
-             System.out.println(palabra.substring((palabra.length() / 2)-1,
-                (palabra.length() / 2)+1 ));
-        }
-        /*
-        int num = 17345;
-        int tam = 5;
-        int x = 0;
-        int[] save = new int[tam];
-        for (int i = 0; i < tam; i++) {
+        Integer num = 12345;
+        String tmñ;
+        tmñ = num.toString();
+        Integer x = 0;
+        Integer[] save = new Integer[tmñ.length()];
+        for (int i = 0; i < tmñ.length(); i++) {
             save[i] = num % 10;
             num = num / 10;
             x = x + save[i];
         }
         System.out.println(x);
-<<<<<<< HEAD
-        */
+
         /*
-=======
-         */
- /*
->>>>>>> par
-        String frase = "ab cd ef tgh";
-        char spc = ' ';
-        int palabras = 1;
-        char[] save = new char[frase.length()];
-        for (int i = 0; i < frase.length(); i++) {
-            save[i] = frase.charAt(i);
-            //System.out.println(save[i]);
-            if (save[i] == spc) {
-                palabras = palabras + 1;
-            }//if
-        }//for
-        System.out.println(palabras);
+        String frase = "   Salimos    a     las    8  ";
+        frase = frase.trim();
+        String[] palabras = frase.split("\\s+");
+        System.out.println(palabras.length);
          */
  /*
         char[] vocal = {'a','e','i','o','u'};
         String frase = "abcdefgo";
         int vocales = 0;
         char[] save = new char[frase.length()];
-        //for(char c: toCharArray()){}
+        //for(char c: vocales.toCharArray()){}
         for (int i = 0; i < frase.length(); i++){
             save[i] = Character.toLowerCase(frase.charAt(i));
             if (save[i] == vocal[0] || save[i] == vocal[1] || 
