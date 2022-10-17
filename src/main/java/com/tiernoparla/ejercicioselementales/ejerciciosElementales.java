@@ -2,8 +2,10 @@ package com.tiernoparla.ejercicioselementales;
 
 //import java.util.Scanner;
 import java.lang.Math;
+import java.util.Arrays;
 
 public class ejerciciosElementales {
+
     static void interes() {
         //hacer metodo con el interes
         //interes X años
@@ -11,8 +13,8 @@ public class ejerciciosElementales {
         double in = 5;
         double y = 3;
         double interest;
-        for (int i = 0; i < y; i++){
-            interest = n + n*in/100;
+        for (int i = 0; i < y; i++) {
+            interest = n + n * in / 100;
             n = interest;
             //System.out.println(interest);
         }
@@ -20,9 +22,58 @@ public class ejerciciosElementales {
     }
 
     public static void main(String[] args) {
+
+        //matriz NxN
+        int tam = 3;
+        int[][] mat = new int[tam][tam];
+        for (int i = 0; i < tam ; i++){
+            for (int j=0; j < tam; j++){
+                double rnd = Math.round(Math.random());
+                mat[i][j] = (int)rnd;
+                //System.out.print(mat[i][j]);
+            }//for
+            System.out.println("");
+        }//for
         
-        interes();
-        
+        for (int[] arr: mat){
+            System.out.println(Arrays.toString(arr));
+        }
+        /*
+        //password valido
+        String pass = "qwerty   uiop01b";
+        String moded = pass.replaceAll("[^ a-zA-Z[0-9]]", "!");
+        String fin = moded.replaceAll("\\s+", "!");
+        char[] save = new char[pass.length()];
+        int chara = 0;
+        int nums = 0;
+        int spc = 0;
+        for (int i = 0; i < fin.length(); i++) {
+            save[i] = fin.charAt(i);
+            chara = chara + 1;
+            if (Character.isDigit(save[i])) {
+                nums = nums + 1;
+            } else if (save[i] == '!') {
+                spc = spc + 1;
+            }
+        }//for  
+        if (chara < 10 || nums < 2 || spc != 0) {
+            System.out.println("Contraseña invalida");
+        } else {
+            System.out.println("Contraseña valida");
+        }//if
+         */ //Calcular año bisiesto
+        /*
+        int num = 2024;
+        if (num % 4 != 0)  {
+            System.out.println("Año no bisiesto");
+        } else if (num % 100 !=0)  {
+            System.out.println("Año bisiesto");
+        } else if (num % 400 !=0) {
+            System.out.println("Año no bisiesto");
+        } else {
+            System.out.println("Año bisiesto");
+        }
+         */ //interes();
         //sumar digitos
         /*
         Integer num = 12345;
@@ -36,15 +87,13 @@ public class ejerciciosElementales {
             x = x + save[i];
         }
         System.out.println(x);
-        */
-        //contar palabras
+         */ //contar palabras
         /*
         String frase = "   Salimos    a     las    8  ";
         frase = frase.trim();
         String[] palabras = frase.split("\\s+");
         System.out.println(palabras.length);
-         */
-        //contar vocales
+         */ //contar vocales
         /*
         char[] vocal = {'a','e','i','o','u'};
         String frase = "abcdefgo";
@@ -52,7 +101,7 @@ public class ejerciciosElementales {
         char[] save = new char[frase.length()];
         //for(char c: vocales.toCharArray()){}
         for (int i = 0; i < frase.length(); i++){
-            save[i] = Character.toLowerCase(frase.charAt(i));
+            save[i] = Character.gtoLowerCase(frase.charAt(i));
             if (save[i] == vocal[0] || save[i] == vocal[1] || 
                     save[i] == vocal[2] || save[i] == vocal[3] || 
                     save[i] == vocal[4]) {
@@ -60,8 +109,7 @@ public class ejerciciosElementales {
             }//if
         }//for
         System.out.println(vocales);
-         */
-        //caracter del medio
+         */ //caracter del medio
         /*
         String palabra = "abcde";
 
@@ -71,9 +119,8 @@ public class ejerciciosElementales {
             System.out.println(palabra.substring((palabra.length() / 2)-1,
         (palabra.length() / 2)+1 ));
         }
-         */
-         //media
-         /*
+         */ //media
+        /*
         int[] num = {1, 2, 3, 4};
         double x = 0;
         for (int i = 1; i < num.length; i++) {
@@ -92,9 +139,8 @@ public class ejerciciosElementales {
             }// se puede usar else pero no hace falta
         }
         System.out.println(x);
-         */ 
-        //capicua while
-         /*
+         */ //capicua while
+        /*
         int n = 31752;
         int tmp = n;
         int cifra;
@@ -139,8 +185,7 @@ public class ejerciciosElementales {
         int x1 = 1;
         int x2 = 1;
         int x3 = 0;
-        */
-        //int[] x={1,1,0};
+         */ //int[] x={1,1,0};
         /*int n = 8;
         int[] save= new int[n];
         save[0]=1;
@@ -159,8 +204,7 @@ public class ejerciciosElementales {
         for (int i=0; i<save.length; i++){
             System.out.println(save[i]);
         }
-        */
-        //division con scanner
+         */ //division con scanner
         /*
         Scanner sc = new Scanner(System.in);
         int n;
