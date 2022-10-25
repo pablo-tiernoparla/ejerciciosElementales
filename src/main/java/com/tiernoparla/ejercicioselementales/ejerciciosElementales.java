@@ -187,8 +187,119 @@ public class ejerciciosElementales {
     
     public static void main(String[] args) {
         
-        //x^2 hasta negativo
+        //del 1 al 100 de 7 en 7
         
+        /*
+        //mostrar numeros de 1 a n
+        Scanner sc = new Scanner(System.in);
+        int n;
+        System.out.println("Dame un numero");
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++)  {
+            System.out.println(i);
+        }//for
+        */
+        /*
+        //nums hasta negativo + media
+        Scanner sc = new Scanner(System.in);
+        int num = 1;
+        int add = 0;
+        int cont = 0;
+        while (num > 0)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            add = add + num;
+            cont++;
+        }//while
+        int media = add / cont;
+        System.out.println(media);
+        */
+        /*
+        //nums hasta 0 + suma
+        Scanner sc = new Scanner(System.in);
+        int num = 1;
+        int add = 0;
+        while (num != 0)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            add = add + num;
+        }//while
+        System.out.println(add);
+        */
+        /*
+        //adivinar n mayor menor
+        Scanner sc = new Scanner(System.in);
+        int guess = 15;
+        int num = 1;
+        while (num != guess)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            if (num < guess)  {
+                System.out.println("Mayor");
+            } else {
+                System.out.println("Menor");
+            }//if
+        }//while
+        */
+        /*
+        //nums hasta negativo
+        Scanner sc = new Scanner(System.in);
+        int num = 1;
+        int cont = 0;
+        while (num != 0)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            cont++;
+            if (num < 0)  {
+                break;
+            }//if
+        }//while
+        System.out.println(cont);
+        */
+        /*
+        //nums par o impar hasta 0
+        Scanner sc = new Scanner(System.in);
+        int num = 1;
+        while (num != 0)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            if (num % 2 == 0)  {
+                System.out.println("Es par");
+            } else if (num % 2 != 0) {
+                System.out.println("Es impar");
+            } else {
+                break;
+            }//if
+        }//while
+        */        
+        /*
+        //mayor menor que 0
+        Scanner sc = new Scanner(System.in);
+        int num = 1;
+        while (num !=0)  {
+            System.out.println("Dame un numero");
+            num = sc.nextInt();
+            if (num < 0)  {
+                System.out.println("Es menor que cero");
+            } else if (num > 0)  {
+                System.out.println("Es mayor que 0");
+            } else {
+                break;
+            }//if
+        }//while
+        */
+        /*
+        //x^2 hasta negativo
+        Scanner sc = new Scanner(System.in);
+        int num;
+        System.out.println("Dame un numero");
+        num = sc.nextInt();
+        double tmp = num;
+        if (num > 0)  {
+            tmp = Math.pow(tmp, 2);
+            System.out.println((int)tmp);
+        }//if
+        */
         /*
         //primos hasta n
         int tam = 50;
