@@ -1,12 +1,14 @@
 package com.tiernoparla.ejercicioselementales;
 
-//import java.util.Scanner;
+import java.util.Scanner;
 import java.lang.Math;
 import java.util.Arrays;
+import java.util.regex.*;
+import java.util.*;
 
 public class ejerciciosElementales {
 
-    static void interes() {
+    public static void interes() {
         //hacer metodo con el interes
         //interes X años
         double n = 100;
@@ -17,28 +19,314 @@ public class ejerciciosElementales {
             interest = n + n * in / 100;
             n = interest;
             //System.out.println(interest);
-        }
+        }//for
         System.out.println(n);
+    }//interes
+
+    //primos gemelos
+    public static boolean isPrime(int p) {
+
+        //boolean isPrime = true;
+        for (int i = 2; i < p; i++) {
+            if (p % i == 0) {
+                return false;
+            }//if
+        }//for
+        return true;
     }
 
-    public static void main(String[] args) {
+    public static void primosGemelos(int n) {
 
+        for (int i = 2; i < n; i++) {
+            if (isPrime(i) == true && isPrime(i + 2)) {
+                System.out.print(i);
+                System.out.print(" ");
+                System.out.println(i + 2);
+            }//if
+        }//for
+    }//primosGemelos
+
+    public static void scanNums() {
+        
+        Scanner sc = new Scanner(System.in);
+        int tam;
+        System.out.println("Cantidad de numeros");
+        tam = sc.nextInt();
+        int nums[] = new int[tam];
+        for (int j = 0; j < tam; j++) {
+            System.out.println("Numero en posicion " + j);
+            nums[j] = sc.nextInt();
+        }//for
+    }//scanNums
+    
+    public static void scanConsec(){
+        
+        Scanner sc = new Scanner(System.in);
+        int tam;
+        System.out.println("Cantidad de numeros");
+        tam = sc.nextInt();
+        int nums[] = new int[tam];
+        for (int j = 0; j < tam; j++) {
+            System.out.println("Numero en posicion " + j);
+            nums[j] = sc.nextInt();
+        }//for
+        int cont = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i - 1] + 1 == nums[i]) {
+                cont++;
+            }//if
+        }//for
+        if (cont == nums.length - 1) {
+            System.out.println("Son consecutivos");
+        } else {
+            System.out.println("No son consecutivos");
+        }//if
+    }//scanConsec
+
+    public static void numMedio() {
+
+        //num del medio
+        Scanner sc = new Scanner(System.in);
+        int a;
+        int b;
+        int c;
+        System.out.println("Dame 3 numeros");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
+        double num = (a * Math.pow(10, 2)) + (b * Math.pow(10, 1)) + c;
+        System.out.println("Numero para averiguar si es el del medio");
+        int med;
+        med = sc.nextInt();
+        if (med == b) {
+            System.out.println(med + " es el numero del medio");
+        } else {
+            System.out.println(med + " no es el numero del medio");
+        }//if
+    }//numMedio
+
+    public static ArrayList<Integer> facto(int n) {
+
+        ArrayList<Integer> nums = new ArrayList<Integer>();
+        Integer fact = 2;
+        int[] save = {};
+        Integer i = 0;
+        while (n != 1) {
+            if (n % fact == 0) {
+                n = n / fact;
+                nums.add(fact);
+                i++;
+            } else {
+                fact++;
+            }//if
+        }//while
+        return nums;
+    }//facto
+
+    public static int[] sacarDigits(Integer n) {
+
+        int tmp = n;
+        String num = n.toString();
+        int[] save = new int[num.length()];
+        for (int i = 0; i < num.length(); i++) {
+            save[i] = tmp % 10;
+            tmp = tmp / 10;
+        }//for
+        return save;
+    }//vuelta
+
+    public static void pares(int n) {
+
+        int[] saved = sacarDigits(n);
+        int cont = 0;
+        for (int i = 0; i < saved.length; i++) {
+            if (saved[i] % 2 == 0) {
+                cont++;
+            }//if
+        }//for
+        if (cont == saved.length) {
+            System.out.println("Los digitos son pares");
+        } else {
+            System.out.println("Los digitos no son pares");
+        }//if
+    }//pares
+
+    public static void vueltaString(String frase) {
+
+        char[] vuelta = new char[frase.length()];
+        int j = frase.length() - 1;
+        for (int i = 0; i < frase.length(); i++) {
+            vuelta[j] = frase.charAt(i);
+            j--;
+        }//for
+        System.out.println(String.valueOf(vuelta));
+    }//vueltaString
+
+    public static void printDigits(int[] digits) {
+        System.out.println(digits[0] + " " + digits[1] + " " + digits[2] + " " + digits[3] + " " + digits[4]);
+    }//printDigits
+
+    public static boolean continueCondition(int[] digits) {
+        return digits[0] < 10 && digits[1] < 10 && digits[2] < 10 && digits[3] < 10 && digits[4] < 10;
+    }//stopCondition
+    
+    public static int updateNext(int[] digits, int pos) {
+        
+        if (digits[pos] == 10)  {
+            return digits[pos+1]+1;
+        }//if
+        return digits[pos+1];
+    }//updateNext
+    
+    public static int updateThis(int[] digits, int pos)  {
+        if(digits[pos] == 10)  {
+            return 0;
+        }//if
+        return digits[pos];
+    }//updateThis
+    
+    public static void main(String[] args) {
+        
+        //x^2 hasta negativo
+        
+        /*
+        //primos hasta n
+        int tam = 50;
+        for (int i = 0; i < tam; i++)  {
+            if (isPrime(i))  {
+                System.out.println(i);
+            }//if
+        }//for
+        */
+        /*
+        //cuadrado n*
+        int tam = 7;
+        char[][] matrix = new char [tam][tam];
+        for (int i = 0; i < tam; i++)  {
+            for (int j = 0; j < tam; j++)  {
+                matrix[i][j] = '*';
+            }//for
+        }//for
+        for (char[] arr : matrix) {
+            System.out.println(Arrays.toString(arr));
+        }//for
+        */
+        //tablas multiplicar
+        /*
+        int[][] matrix = new int [10][10];
+        for (int i = 0; i < matrix.length; i++){
+            for (int j = 0; j < 10; j++) {
+                matrix[i][j] = (i+1) * (j+1);
+                //System.out.print(matrix[i][j]);
+            }//for
+            //System.out.println("");
+        }//for
+        for (int[] arr : matrix) {
+            System.out.println(Arrays.toString(arr));
+        }//for
+        */
+        //del 1 al 9
+        /*
+        final int TAM = 5;
+        int[] digits = new int[TAM];
+        while (continueCondition(digits)) {
+            printDigits(digits);
+            digits[0]++;
+            for (int i = 0; i < digits.length - 1; i++)  {
+                digits[i+1] = updateNext(digits, i);
+                digits[i] = updateThis(digits, i);
+            }//for
+        }//while
+        */
+        /*
+        //gcd recursividad
+        Scanner sc = new Scanner(System.in);
+        int tam;
+        System.out.println("Cantidad de numeros");
+        tam = sc.nextInt();
+        int nums[] = new int[tam];
+        for (int j = 0; j < tam; j++) {
+            System.out.println("Numero en posicion " + j);
+            nums[j] = sc.nextInt();
+        }//for
+        int gcd = 1;
+        for (int i = 1; i <= nums[0] && i <= nums[1]; i++){
+            if (nums[0] % i == 0 && nums[1] % i == 0){
+                gcd = i;
+            }//if
+        }//for
+        System.out.println("El gcd es: " + gcd);
+        */
+        //vuelta string
+        //vueltaString("hola");
+        //si son vocales con regex
+        /*
+        String frase = "asdfghjklñ";
+        int vocal = 0;
+        char[] save = new char [frase.length()];
+        for (int i = 0; i < frase.length(); i++)  {
+            save[i] = frase.charAt(i);
+            if (save[i] == 'a' || save[i] == 'e' || save[i] == 'i' 
+                    || save[i] == 'o' || save[i] == 'u')  {
+                vocal++;
+            }//if
+        }//for
+        System.out.println(vocal);
+         */
+        //si son pares
+        //pares(2468);
+        //factorizacion
+        //facto(432);
+        //si uno es el del medio
+        //numMedio();
+        //si son consecutivos
+        //scanNums();
+        //cuantos X hay en n
+        /*
+        Integer n = 1234522;
+        String tam = n.toString();
+        char x = '2';
+        int cont = 0;
+        for (int i = 0; i < tam.length(); i++)  {
+            if (tam.charAt(i) == x)  {
+                cont++;
+            }//if
+        }//for
+        System.out.print("La cantidad de" + x + "que hay es: ");
+        System.out.println(cont++);
+         */
+        //numeros primos gemelos hasta n metodo
+        /*
+        primosGemelos(50);
+         */
+        //triangulo sabiendo lados
+        /*
+        double lado1 = 10;
+        double lado2 = 15;
+        double lado3 = 20;
+        double smp = (lado1+lado2+lado3) /2;
+        double area = Math.sqrt(smp*(smp-lado1)*(smp-lado2)*(smp-lado3));
+        System.out.print(area);
+        System.out.println("m^2");
+         */
+ /*
         //matriz NxN
         int tam = 3;
         int[][] mat = new int[tam][tam];
-        for (int i = 0; i < tam ; i++){
-            for (int j=0; j < tam; j++){
+        for (int i = 0; i < tam; i++) {
+            for (int j = 0; j < tam; j++) {
                 double rnd = Math.round(Math.random());
-                mat[i][j] = (int)rnd;
+                mat[i][j] = (int) rnd;
                 //System.out.print(mat[i][j]);
             }//for
             System.out.println("");
         }//for
         
-        for (int[] arr: mat){
+        for (int[] arr : mat) {
             System.out.println(Arrays.toString(arr));
-        }
-        /*
+        }//for
+         */
+ /*
         //password valido
         String pass = "qwerty   uiop01b";
         String moded = pass.replaceAll("[^ a-zA-Z[0-9]]", "!");
@@ -61,7 +349,8 @@ public class ejerciciosElementales {
         } else {
             System.out.println("Contraseña valida");
         }//if
-         */ //Calcular año bisiesto
+         */
+        //Calcular año bisiesto
         /*
         int num = 2024;
         if (num % 4 != 0)  {
@@ -244,8 +533,8 @@ public class ejerciciosElementales {
         for(int i = 2; i < 11; i = i + 2) {
             System.out.println(i);
         } // for
-         */ {
+         *//* {
 
-        }
+        }*/
     } // main
 }// ejerciciosElementales
