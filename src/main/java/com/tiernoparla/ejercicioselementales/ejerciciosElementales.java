@@ -187,8 +187,192 @@ public class ejerciciosElementales {
     
     public static void main(String[] args) {
         
-        //del 1 al 100 de 7 en 7
+        //6 notas alumnos aprobados y suspensos
         
+        
+        /*
+        //desinfectantes
+        Scanner sc = new Scanner(System.in);
+        int factura = 5;
+        int[][][] matrix = new int [factura][1][1];
+        int cantidad;
+        int precio;
+        int facturacion;
+        int suma = 0;
+        int respuesta2 = 0;
+        int cont = 0;
+        int[] save = new int [factura];
+        for (int i = 0; i < factura; i++){
+            int j = 0;
+            int p = 0;
+            System. out.println("Codigo " + i);
+            matrix[i][j][p] = sc.nextInt();
+            for (j = 0; j < 1; j++){
+                p = 0;
+                System.out.println("Cantidad vendida " + i);
+                cantidad = sc.nextInt();
+                if (i == 1)  {
+                    respuesta2 = cantidad;
+                }//if
+                for (p = 0; p < 1; p++) {
+                    System.out.println("Precio " + i);
+                    precio = sc.nextInt();
+                    facturacion = precio * cantidad;
+                    save[i] = facturacion;
+                    if (save[i] > 600)  {
+                        cont++;
+                    }//if
+                    suma = suma + save[i];
+                }//for
+            }//for
+        }//for
+        System.out.println("Facturacion total: " + suma);
+        System.out.println("Litros vendidos articulo 1: " + respuesta2);
+        System.out.println("Facturas a mas de 600 euros: " + cont);
+        */
+        /*
+        //tabla de numero introducido
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Dame un numero");
+        int num = sc.nextInt();
+        int tmp = num;
+        for (int i = 1; i <= 10; i++)  {
+            tmp = num * i;
+            System.out.println(tmp);
+        }//for
+        */
+        /*
+        //5 alumnos edad altura
+        Scanner sc = new Scanner(System.in);
+        int alumnos = 5;
+        int medias = 1;
+        int contE = 0;
+        int contA = 0;
+        int addE = 0;
+        int addA = 0;
+        int [][] matrix = new int [alumnos][medias];
+        for (int i = 0; i < alumnos; i++)  {
+            int j = 0;
+            System.out.println("Edad del alumno " + i);
+            matrix[i][j] = sc.nextInt();
+            addE = addE + matrix[i][j];
+            if (matrix[i][j] >= 18)  {
+                contE++;
+            }//if
+            for (j = 0; j < medias; j++)  {
+                System.out.println("Altura del alumno " + i);
+                matrix[i][j] = sc.nextInt();
+                addA = addA + matrix[i][j];
+                if (matrix[i][j] >= 175)  {
+                    contA++;
+                }//if
+            }//for
+        }//for
+        int mediaE = addE / alumnos;
+        int mediaA = addA / alumnos;
+        System.out.println("Media edad: " + mediaE);
+        System.out.println("Media altura: " + mediaA);
+        System.out.println("Mayores de edad " + contE);
+        System.out.println("Mayores de 175 " + contA);        /*
+        */
+        /*
+        //sueldos suma y > 1000
+        Scanner sc = new Scanner(System.in);
+        int tam = 10;
+        int[] sueldos = new int [tam];
+        int suma = 0;
+        int cont = 0;
+        for (int i = 0; i < tam; i++)  {
+            System.out.println("Dame el numero de posicion " + i);
+            sueldos[i] = sc.nextInt();
+            suma = suma + sueldos[i];
+            if (sueldos[i] > 1000)  {
+                cont++;
+            }//if
+        }//for
+        System.out.println("Suma: " + suma);
+        System.out.println("Mayores a 1k: " + cont);
+        */
+        /*
+        //media posotivos, negativos y ceros
+        Scanner sc = new Scanner(System.in);
+        int tam = 10;
+        int addP = 0;
+        int contP = 0;
+        int addN = 0;
+        int contN =0;
+        int cont0 =0;
+        int[] nums = new int [tam];
+        for (int i = 0; i < tam; i++)  {
+            System.out.println("Dame el numero de psoicion " + i);
+            nums[i] = sc.nextInt();
+            if (nums[i] > 0)  {
+            contP++;
+            addP = addP + nums[i];
+            } else if (nums[i] < 0)  {
+                contN++;
+                addN = addN + nums[i];
+            }else {
+                cont0++;
+            }//if
+        }//for
+        int positiveMedia = addP / contP;
+        int negativeMedia = addN / contN;
+        System.out.println("Media positivos: " + positiveMedia);
+        System.out.println("Media negativos: " + negativeMedia);
+        System.out.println("Cantidad de ceros: " + cont0);
+        */
+        /*
+        //factorial n
+        int n = 6;
+        int factorial = 1;
+        for (int i = n; i > 0; i--)  {
+            factorial = factorial * i;
+        }//for
+        System.out.println(factorial);
+        */
+        /*
+        //producto 10 primeros impares
+        long prod = 1;
+        int tam = 10;
+        int i = 0;
+        int j = 0;
+        int nums[] = new int[tam];
+        while (1 > 0)  {
+            if (i % 2 != 0)  {
+                nums[j] = i;
+                prod = prod * nums[j];
+                j++;
+            }else if (j == tam)  {
+                break;
+            }//if
+            i++;
+        }//while
+        System.out.println(prod);
+        */
+        /*
+        //15 nums y suma
+        Scanner sc = new Scanner(System.in);
+        int tam = 15;
+        int nums[] = new int[tam];
+        int suma = 0;
+        for (int i = 0; i < tam; i++)  {
+            System.out.println("Dame el numero de posicion " + i);
+            nums[i] = sc.nextInt();
+            suma = suma + nums[i];
+        }//for
+        System.out.println(suma);
+        */
+        /*
+        //del 1 al 100 de 7 en 7
+        int num = 100;
+        for (int i = 0; i <= num; i++)  {
+            System.out.print(i + " ");
+            if (i % 7 == 0)  {
+                System.out.println("");
+            }//if
+        }//for
+        */
         /*
         //mostrar numeros de 1 a n
         Scanner sc = new Scanner(System.in);
